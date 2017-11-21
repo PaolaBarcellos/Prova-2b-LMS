@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Aulas SQL</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="..\css\aulassql.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <script>
+ var modal = document.getElementById('id01');
+
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+ 
+ </script>
+
+</head>
+<body background="..\imagens\fundo.png">
+
+<div>
+<ul>
+ <li></h1><a href="areaaluno.html"> <button class="button2" style="vertical-align:middle" ><span><h4><pre>HOME</pre></h4></span></button></a></li>
+ <center> <h1>Linguagem SQL</h1></center>
+</ul>
+
+
+</div>
+
+<div class="row">
+
+
+<div class="col-3 left">
+  <div class="aside">
+    <img src="..\imagens\aluna.png">
+    <p><strong>Ola:</strong> Nome do aluno <br/><strong>Curso:</strong> nome do curso<br/>
+    <a href="notasefaltasaluno.html"><button class="button" style="vertical-align:middle"><span><h4>Notas e Faltas</h4></span></button></a>
+    <a href="..\imagens\calendario.png"><p><button class="button" style="vertical-align:middle"><span><h4>Calendário e Horários</h4></span></button></p></a>
+	<a href="Smartclass.html"><button class="button" style="vertical-align:middle"><span><h4>SmartClass</h4></h2></span></button></p></a>
+	<a href="satividades.html"><button class="button" style="vertical-align:middle"><span><h4>Status das Atividades</h4></h2></span></button></p></a>
+	<a href="perfilaluno.html"><button class="button" style="vertical-align:middle"><span><h4>Perfil</h4></h2></span></button></p></a>
+	<a href="index.html"><button class="button" style="vertical-align:middle"><span><h4>Sair</h4></h2></span></button></p></a>
+ </div>
+</div>
+<div class="col-6">
+  <div class="box">
+      <h1>Colocar as atividades aqui</h1>
+  </div>
+     <!-- <a class="w3-bar-item w3-button" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login Aluno</a>-->
+     <a href="#"> <button class="button5" onclick="document.getElementById('id01').style.display='block'"  style="vertical-align:middle" ><span><h5>Enviar E-mail para o Professor</h5></span></button></a>
+  </div>
+</div>
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="..\imagens\email.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label><b>Mensagem para o professor</b></label>
+      <textarea    placeholder="Escreve aqui sua Mensagem" name="mensagem" required></textarea>
+        
+     <a href="#"><button class="button6">Enviar Menssagem</button></a>
+      
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancelar</button>
+      
+	 
+    </div>
+</div>
+    </form>
+
+  
+ 
+
+
+
+
+
+
+<div class="footer">
+  <div class="w3-row-padding">
+  <div class="w3-third">
+    <h2>TELEFONE</h2>
+    <p>COM:(11)4241-7277</p> 
+    <p>CEL:(11)97565-7804</p>
+  </div>
+
+  <div class="w3-third">
+    <h2>E-MAIL</h2>
+    <p>unitectbfinal@hotmail.com</p>
+  </div>
+
+  <div class="w3-third">
+    <h2>ENDEREÇO</h2>
+    <p>Av. Rudge, 315 - Bom Retiro, São Paulo - SP, 01133-000</p>
+  </div>
+  </div>
+</div>
+</body>
+</html>

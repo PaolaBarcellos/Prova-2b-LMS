@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulario de prova e atividades</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="..\CSS\smartclass.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$( ".tipoQuestao" ).change(function() {
+				var valor = $(this).val();
+					switch(valor){
+						case "1":
+							if($("#ads1manhã").hasClass("esconde")){
+								$("#ads1manhã").removeClass("esconde");
+								$("#ads1manhã").addClass("mostra");
+									
+							$("#ads1noite").addClass("esconde");
+							$("#ads2manhã").addClass("esconde");
+							}else{
+								$("#ads1manhã").addClass("esconde");
+								$("#ads1manhã").removeClass("mostra");
+							}
+						break;
+						case "2":
+							if($("#ads1noite").hasClass("esconde")){
+								$("#ads1noite").removeClass("esconde");
+								$("#ads1noite").addClass("mostra");
+								$("#ads1manhã").addClass("esconde");
+								
+							$("#ads2manhã").addClass("esconde");
+							$("#ads1manhã").addClass("esconde");
+							}else{
+								$("#multipla").addClass("esconde");
+								$("#multipla").removeClass("mostra");
+							}
+						break;
+						case "3":
+							if($("#ads2manhã").hasClass("esconde")){
+								$("#ads2manhã").removeClass("esconde");
+								$("#ads2manhã").addClass("mostra");
+								$("#ads1manhã").addClass("esconde");
+								$("#ads1noite").addClass("esconde");					
+							}else{
+								$("#ads2manhã").addClass("esconde");
+								$("#ads2manhã").removeClass("mostra");
+							}
+						break;
+						default:
+								$("#ads1manhã").addClass("esconde");
+								$("#ads1noite").addClass("esconde");
+								$("#ads2manhã").addClass("esconde");
+						break;
+						}
+					
+				});
+			});
+    </script>
+</head>
+<body background="..\imagens\fundo.png">	
+		<ul>
+			<center>
+				<li>
+					<li>
+						<a href="areaprofessor.html"> 
+							<button class="button2" style="vertical-align:middle" >
+								<span>
+									<h4><pre>HOME</pre></h4>
+								</span>
+							</button>
+						</a>
+					</li>
+						<h1>UNIVANDS</h1>
+				</li>
+			</center>
+		</ul>
+			
+			
+			
+				<div class="row">
+					<div class="col-3 left">
+						<div class="aside">
+							<img src="..\Imagens\prof.png">
+							<p><strong>Ola:</strong> Nome do professor </p>
+							<p><strong>disciplina:</strong> nome do curso</p>
+							<a href="..\Paginas\notasefaltasprofessor.html">
+								<p>
+									<button class="button" style="vertical-align:middle">
+										<span>
+											<h4>Notas e Faltas</h4>
+										</span>
+									</button>
+								</p>
+							</a>
+							<a href="..\imagens\calendario.png">
+								<p>
+									<button class="button" style="vertical-align:middle">
+										<span>
+											<h4>Calendário e Horários</h4>
+										</span>
+									</button>
+								</p>
+							</a>
+							
+							<a href="..\Paginas\smartclassprofessor.html">
+								<p>
+									<button class="button" style="vertical-align:middle">
+										<span>	
+											<h4>SmartClass</h4>
+										</span>
+									</button>
+								</p>
+							</a>
+							<a href="perfilprof.html">
+								<p>
+									<button class="button" style="vertical-align:middle">
+										<span>
+											<h4>Perfil</h4>
+										</span>
+									</button>
+								</p>
+							</a>
+							<a href="index.html">
+								<p>
+									<button class="button" style="vertical-align:middle">
+										<span>
+											<h4>Sair</h4>
+										</span>
+									</button>
+								</p>
+							</a>
+						</div>
+					</div>
+				
+			
+			
+			
+			<div class="content">
+			<div class="box">
+				<div><h3>Lista de Provas e exercícios</h3>
+					<form>
+						<p>Selecione exercícios ou prova</p>
+						<select>
+							<option>Selecione o teste</option>
+						</select>
+						<select class="tipoQuestao">
+							<option>Turma</option>
+							<option value="1">ADS 1A manhã</option>
+							<option value="2">ADS 1A Noite</option>
+							<option value="3">ADS 2A Manhã</option>
+						</select>
+						
+						<div id="ads1manhã"  class="esconde">
+							<p>Lista ADS 1A manhã</p>							
+								<table border='0'>
+									<tr>
+										<th>Nome aluno</th>
+										<th>Data de entrega</th>
+										<th>Trabalho e provar</th>
+									</tr> 
+
+									<tr>
+										<th>Jose Henrique</th>												
+										<th><input type+"text" name="Data" size="3"></th>
+										<th>
+											<select>
+												<option value="turma">Selecione</option>
+											</select>
+										</th>
+									</tr>  
+
+									<tr>
+										<th>Maria Antonieta</th>												
+										<th><input type+"text" name="Data" size="3"></th>
+										<th>
+											<select>
+												<option value="turma">Selecione</option>
+											</select>
+										</th>
+									</tr>  
+
+									<tr>
+										<th>Bela Andrade</th>												
+										<th><input type+"text" name="Data" size="3"></th>
+										<th>
+											<select>
+												<option value="turma">Selecione</option>
+											</select>
+										</th>
+									</tr> 
+								</table>
+						</div>
+						
+						<div id="ads1noite"  class="esconde">
+							<p>Lista ADS 1A Noite</p>							
+								<table border='0'>
+									<tr>
+										<th>Nome aluno</th>
+										<th>Data de entrega</th>
+										<th>Trabalho e provar</th>
+									</tr> 
+
+									<tr>
+										<th>Jose Henrique</th>												
+										<th><input type+"text" name="Data" size="3"></th>
+										<th>
+											<select>
+												<option value="turma">Selecione</option>
+											</select>
+										</th>
+									</tr>  
+
+									<tr>
+										<th>Maria Antonieta</th>												
+										<th><input type+"text" name="Data" size="3"></th>
+										<th>
+											<select>
+												<option value="turma">Selecione</option>
+											</select>
+										</th>
+									</tr>  
+
+									<tr>
+										<th>Bela Andrade</th>												
+										<th><input type+"text" name="Data" size="3"></th>
+										<th>
+											<select>
+												<option value="turma">Selecione</option>
+											</select>
+										</th>
+									</tr> 
+								</table>
+						</div>
+						
+						<div id="ads2manhã"  class="esconde">
+							<p>Lista ADS 2A Manhã</p>							
+								<table border='0'>
+									<tr>
+										<th>Nome aluno</th>
+										<th>Data de entrega</th>
+										<th>Trabalho e provar</th>
+									</tr> 
+
+									<tr>
+										<th>Jose Henrique</th>												
+										<th><input type+"text" name="Data" size="3"></th>
+										<th>
+											<select>
+												<option value="turma">Selecione</option>
+											</select>
+										</th>
+									</tr>  
+
+									<tr>
+										<th>Maria Antonieta</th>												
+										<th><input type+"text" name="Data" size="3"></th>
+										<th>
+											<select>
+												<option value="turma">Selecione</option>
+											</select>
+										</th>
+									</tr>  
+
+									<tr>
+										<th>Bela Andrade</th>												
+										<th><input type+"text" name="Data" size="3"></th>
+										<th>
+											<select>
+												<option value="turma">Selecione</option>
+											</select>
+										</th>
+									</tr> 
+								</table>
+						</div>
+
+						<input type="submit" value="Buscar"><br/>
+					</form>
+				</div>
+				</div>	
+			</div>
+		</div>
+		
+		<div class="footer">
+			<div class="w3-row-padding">
+				<div class="w3-third">
+					<h2>TELEFONE</h2>
+					<p>COM:(11)4241-7277</p> 
+					<p>CEL:(11)97565-7804</p>
+				</div>
+
+				<div class="w3-third">
+					<h2>E-MAIL</h2>
+					<p>unitectbfinal@hotmail.com</p>
+				</div>
+
+				<div class="w3-third">
+					<h2>ENDEREÇO</h2>
+					<p>Av. Rudge, 315 - Bom Retiro, São Paulo - SP, 01133-000</p>
+				</div>
+			</div>
+		</div>
+</body>
+</html>

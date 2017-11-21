@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>notas e faltas professor</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="..\CSS\notasefaltasprofessor.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+				<script>
+				$(document).ready(function() {
+					$( ".button" ).click(function() {
+					
+						if($("#" + $(this).attr("data-id")).hasClass("esconde")){
+							console.log("#" + $(this).attr("data-id"))
+							$("#" + $(this).attr("data-id")).removeClass("esconde");
+							$("#" + $(this).attr("data-id")).addClass("mostra");
+						}else {
+						
+							$("#" + $(this).attr("data-id")).addClass("esconde");
+							$("#" + $(this).attr("data-id")).removeClass("mostra");
+						}
+						
+					});
+				});
+				</script>
+
+	</head>
+<body background="..\imagens\fundo.png">
+	<ul>
+		<center>
+			<li>
+				<li>
+					<a href="areaprofessor.html"> 
+						<button class="button2" style="vertical-align:middle" >
+							<span>
+								<h4><pre>HOME</pre></h4>
+							</span>
+						</button>
+					</a>
+				</li>
+					<h1>UNIVANDS</h1>
+			</li>
+		</center>
+	</ul>
+
+		<div class="row">
+			<div class="col-3 left">
+				<div class="aside">
+					<img src="..\Imagens\prof.png">
+					<p><strong>Ola:</strong> Nome do professor </p>
+					<p><strong>disciplina:</strong> nome do curso</p>
+					
+						<a href="..\imagens\calendario.png">
+								<p>
+									<button class="button" style="vertical-align:middle">
+										<span>
+											<h4>Calendário e Horários</h4>
+										</span>
+									</button>
+								</p>
+							</a>
+				
+					<a href="..\Paginas\smartclassprofessor.html">
+						<p>
+							<button class="button" style="vertical-align:middle">
+								<span>	
+									<h4>SmartClass</h4>
+								</span>
+							</button>
+						</p>
+					</a>
+					<a href="perfilprof.html">
+						<p>
+							<button class="button" style="vertical-align:middle">
+								<span>
+									<h4>Perfil</h4>
+								</span>
+							</button>
+						</p>
+					</a>
+					<a href="index.html">
+						<p>
+							<button class="button" style="vertical-align:middle">
+								<span>
+									<h4>Sair</h4>
+								</span>
+							</button>
+						</p>
+					</a>
+				</div>
+			</div>
+			
+			<div class="col-6">
+				<div class="content	">
+					<div class="row">	
+						<div class="col-6 left">
+							
+							<div id="menu">
+								<div class="button-select">
+									<button class="button" style="vertical-align:middle" data-id="sub-menu-1">
+										<h4>ADS 1A manhã</h4>
+									</button>
+									<div id="sub-menu-1" class="sub-menu esconde">
+										<div class="legenda">
+											<p>Linguagem de Programação II</p>
+											<button class="button" style="vertical-align:middle" >
+												<h4>Salvar notas</h4>
+											</button>
+											<table border='0'>
+											  <tr>
+												<th>Nome aluno</th>
+												
+												<th>MB1</th>
+												<th>SUB1</th>
+												<th>MB2</th>
+												<th>SUB2</th>
+												<th>MF</th>
+												<th>Faltas</th>
+												<th>Situação</th>
+											  </tr> 
+
+											  <tr>
+												<th>Jose Henrique</th>												
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Faltas" size="3"></th>
+												<th>
+													<select>
+														<option value="turma">Situação</option>
+														<option value="Aprovado">Aprovado</option>
+														<option value="Reprovado">Reprovado</option>
+													</select>
+												</th>
+											  </tr>  
+
+											  <tr>
+												<th>Maria Antonieta</th>												
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Faltas" size="3"></th>
+												<th>
+													<select>
+														<option value="turma">Situação</option>
+														<option value="Aprovado">Aprovado</option>
+														<option value="Reprovado">Reprovado</option>
+													</select>
+												</th>
+											  </tr>  
+
+												<tr>
+												<th>Bela Andrade</th>												
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Faltas" size="3"></th>
+												<th>
+													<select>
+														<option value="turma">Situação</option>
+														<option value="Aprovado">Aprovado</option>
+														<option value="Reprovado">Reprovado</option>
+													</select>
+												</th>
+											  </tr> 
+											</table>
+											<p>Linguagem SQL</p>
+											<button class="button" style="vertical-align:middle" >
+												<h4>Salvar notas</h4>
+											</button>
+											<table border='0'>
+											  <tr>
+												<th>Nome aluno</th>
+												
+												<th>MB1</th>
+												<th>SUB1</th>
+												<th>MB2</th>
+												<th>SUB2</th>
+												<th>MF</th>
+												<th>Faltas</th>
+												<th>Situação</th>
+											  </tr> 
+
+											  <tr>
+												<th>Jose Henrique</th>												
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Faltas" size="3"></th>
+												<th>
+													<select>
+														<option value="turma">Situação</option>
+														<option value="Aprovado">Aprovado</option>
+														<option value="Reprovado">Reprovado</option>
+													</select>
+												</th>
+											  </tr>  
+
+											  <tr>
+												<th>Maria Antonieta</th>												
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Faltas" size="3"></th>
+												<th>
+													<select>
+														<option value="turma">Situação</option>
+														<option value="Aprovado">Aprovado</option>
+														<option value="Reprovado">Reprovado</option>
+													</select>
+												</th>
+											  </tr>  
+
+												<tr>
+												<th>Bela Andrade</th>												
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Faltas" size="3"></th>
+												<th>
+													<select>
+														<option value="turma">Situação</option>
+														<option value="Aprovado">Aprovado</option>
+														<option value="Reprovado">Reprovado</option>
+													</select>
+												</th>
+											  </tr> 
+											</table>
+											<p>Tecnologia Web</p>
+											<button class="button" style="vertical-align:middle" >
+												<h4>Salvar notas</h4>
+											</button>
+											<table border='0'>
+											  <tr>
+												<th>Nome aluno</th>
+												
+												<th>MB1</th>
+												<th>SUB1</th>
+												<th>MB2</th>
+												<th>SUB2</th>
+												<th>MF</th>
+												<th>Faltas</th>
+												<th>Situação</th>
+											  </tr> 
+
+											  <tr>
+												<th>Jose Henrique</th>												
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Faltas" size="3"></th>
+												<th>
+													<select>
+														<option value="turma">Situação</option>
+														<option value="Aprovado">Aprovado</option>
+														<option value="Reprovado">Reprovado</option>
+													</select>
+												</th>
+											  </tr>  
+
+											  <tr>
+												<th>Maria Antonieta</th>												
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Faltas" size="3"></th>
+												<th>
+													<select>
+														<option value="turma">Situação</option>
+														<option value="Aprovado">Aprovado</option>
+														<option value="Reprovado">Reprovado</option>
+													</select>
+												</th>
+											  </tr>  
+
+												<tr>
+												<th>Bela Andrade</th>												
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Faltas" size="3"></th>
+												<th>
+													<select>
+														<option value="turma">Situação</option>
+														<option value="Aprovado">Aprovado</option>
+														<option value="Reprovado">Reprovado</option>
+													</select>
+												</th>
+											  </tr> 
+											</table>
+										</div>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+					<div class="row">	
+						<div class="col-6 left">
+							<div id="menu">
+								<div class="button-select">
+									<button class="button" style="vertical-align:middle" data-id="sub-menu-2">
+										<h4>ADS 1A Noite</h4>
+									</button>
+									<div id="sub-menu-2" class="sub-menu esconde">
+										<div class="legenda">
+											<p>Linguagem de Programação II</p>
+											<button class="button" style="vertical-align:middle" >
+												<h4>Salvar notas</h4>
+											</button>
+											<table border='0'>
+											  <tr>
+												<th>Nome aluno</th>
+												
+												<th>MB1</th>
+												<th>SUB1</th>
+												<th>MB2</th>
+												<th>SUB2</th>
+												<th>MF</th>
+												<th>Faltas</th>
+												<th>Situação</th>
+											  </tr> 
+
+											  <tr>
+												<th>Jose Henrique</th>							
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Faltas" size="3"></th>
+												<th>
+													<select>
+														<option value="turma">Situação</option>
+														<option value="Aprovado">Aprovado</option>
+														<option value="Reprovado">Reprovado</option>
+													</select>
+												</th>
+											  </tr>  
+
+											  <tr>
+												<th>Maria Antonieta</th>							
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Faltas" size="3"></th>
+												<th>
+													<select>
+														<option value="turma">Situação</option>
+														<option value="Aprovado">Aprovado</option>
+														<option value="Reprovado">Reprovado</option>
+													</select>
+												</th>
+											  </tr>  
+
+												<tr>
+												<th>Bela Andrade</th>										
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Faltas" size="3"></th>
+												<th>
+													<select>
+														<option value="turma">Situação</option>
+														<option value="Aprovado">Aprovado</option>
+														<option value="Reprovado">Reprovado</option>
+													</select>
+												</th>
+											  </tr> 
+											</table>
+											<p>Linguagem SQL</p>
+											<button class="button" style="vertical-align:middle" >
+												<h4>Salvar notas</h4>
+											</button>
+											<table border='0'>
+											  <tr>
+												<th>Nome aluno</th>
+												
+												<th>MB1</th>
+												<th>SUB1</th>
+												<th>MB2</th>
+												<th>SUB2</th>
+												<th>MF</th>
+												<th>Faltas</th>
+												<th>Situação</th>
+											  </tr> 
+
+											  <tr>
+												<th>Jose Henrique</th>									
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Faltas" size="3"></th>
+												<th>
+													<select>
+														<option value="turma">Situação</option>
+														<option value="Aprovado">Aprovado</option>
+														<option value="Reprovado">Reprovado</option>
+													</select>
+												</th>
+											  </tr>  
+
+											  <tr>
+												<th>Maria Antonieta</th>								
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Faltas" size="3"></th>
+												<th>
+													<select>
+														<option value="turma">Situação</option>
+														<option value="Aprovado">Aprovado</option>
+														<option value="Reprovado">Reprovado</option>
+													</select>
+												</th>
+											  </tr>  
+
+												<tr>
+												<th>Bela Andrade</th>											
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Faltas" size="3"></th>
+												<th>
+													<select>
+														<option value="turma">Situação</option>
+														<option value="Aprovado">Aprovado</option>
+														<option value="Reprovado">Reprovado</option>
+													</select>
+												</th>
+											  </tr> 
+											</table>
+											<p>Tecnologia Web</p>
+											<button class="button" style="vertical-align:middle" >
+												<h4>Salvar notas</h4>
+											</button>
+											<table border='0'>
+											  <tr>
+												<th>Nome aluno</th>
+												
+												<th>MB1</th>
+												<th>SUB1</th>
+												<th>MB2</th>
+												<th>SUB2</th>
+												<th>MF</th>
+												<th>Faltas</th>
+												<th>Situação</th>
+											  </tr> 
+
+											  <tr>
+												<th>Jose Henrique</th>												
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Faltas" size="3"></th>
+												<th>
+													<select>
+														<option value="turma">Situação</option>
+														<option value="Aprovado">Aprovado</option>
+														<option value="Reprovado">Reprovado</option>
+													</select>
+												</th>
+											  </tr>  
+
+											  <tr>
+												<th>Maria Antonieta</th>											
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Faltas" size="3"></th>
+												<th>
+													<select>
+														<option value="turma">Situação</option>
+														<option value="Aprovado">Aprovado</option>
+														<option value="Reprovado">Reprovado</option>
+													</select>
+												</th>
+											  </tr>  
+
+												<tr>
+												<th>Bela Andrade</th>												
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Faltas" size="3"></th>
+												<th>
+													<select>
+														<option value="turma">Situação</option>
+														<option value="Aprovado">Aprovado</option>
+														<option value="Reprovado">Reprovado</option>
+													</select>
+												</th>
+											  </tr> 
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">	
+						<div class="col-6 left">
+							<div id="menu">
+								<div class="button-select">
+									<button class="button" style="vertical-align:middle" data-id="sub-menu-3">
+										<h4>ADS 2A Manhã</h4>
+									</button>
+									<div id="sub-menu-3" class="sub-menu esconde">
+										<div class="legenda">
+											<p>Linguagem de Programação II</p>
+											<button class="button" style="vertical-align:middle" >
+												<h4>Salvar notas</h4>
+											</button>
+											<table border='0'>
+											  <tr>
+												<th>Nome aluno</th>
+												
+												<th>MB1</th>
+												<th>SUB1</th>
+												<th>MB2</th>
+												<th>SUB2</th>
+												<th>MF</th>
+												<th>Faltas</th>
+												<th>Situação</th>
+											  </tr> 
+
+											  <tr>
+												<th>Jose Henrique</th>												
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Faltas" size="3"></th>
+												<th>
+													<select>
+														<option value="turma">Situação</option>
+														<option value="Aprovado">Aprovado</option>
+														<option value="Reprovado">Reprovado</option>
+													</select>
+												</th>
+											  </tr>  
+
+											  <tr>
+												<th>Maria Antonieta</th>												
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Faltas" size="3"></th>
+												<th>
+													<select>
+														<option value="turma">Situação</option>
+														<option value="Aprovado">Aprovado</option>
+														<option value="Reprovado">Reprovado</option>
+													</select>
+												</th>
+											  </tr>  
+
+												<tr>
+												<th>Bela Andrade</th>												
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Faltas" size="3"></th>
+												<th>
+													<select>
+														<option value="turma">Situação</option>
+														<option value="Aprovado">Aprovado</option>
+														<option value="Reprovado">Reprovado</option>
+													</select>
+												</th>
+											  </tr> 
+											</table>
+											<p>Linguagem SQL</p>
+											<button class="button" style="vertical-align:middle" >
+												<h4>Salvar notas</h4>
+											</button>
+											<table border='0'>
+											  <tr>
+												<th>Nome aluno</th>
+												
+												<th>MB1</th>
+												<th>SUB1</th>
+												<th>MB2</th>
+												<th>SUB2</th>
+												<th>MF</th>
+												<th>Faltas</th>
+												<th>Situação</th>
+											  </tr> 
+
+											  <tr>
+												<th>Jose Henrique</th>											
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Faltas" size="3"></th>
+												<th>
+													<select>
+														<option value="turma">Situação</option>
+														<option value="Aprovado">Aprovado</option>
+														<option value="Reprovado">Reprovado</option>
+													</select>
+												</th>
+											  </tr>  
+
+											  <tr>
+												<th>Maria Antonieta</th>												
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Faltas" size="3"></th>
+												<th>
+													<select>
+														<option value="turma">Situação</option>
+														<option value="Aprovado">Aprovado</option>
+														<option value="Reprovado">Reprovado</option>
+													</select>
+												</th>
+											  </tr>  
+
+												<tr>
+												<th>Bela Andrade</th>											
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Faltas" size="3"></th>
+												<th>
+													<select>
+														<option value="turma">Situação</option>
+														<option value="Aprovado">Aprovado</option>
+														<option value="Reprovado">Reprovado</option>
+													</select>
+												</th>
+											  </tr> 
+											</table>
+											<p>Tecnologia Web</p>
+											<button class="button" style="vertical-align:middle" >
+												<h4>Salvar notas</h4>
+											</button>
+											<table border='0'>
+											  <tr>
+												<th>Nome aluno</th>
+												
+												<th>MB1</th>
+												<th>SUB1</th>
+												<th>MB2</th>
+												<th>SUB2</th>
+												<th>MF</th>
+												<th>Faltas</th>
+												<th>Situação</th>
+											  </tr> 
+
+											  <tr>
+												<th>Jose Henrique</th>												
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Faltas" size="3"></th>
+												<th>
+													<select>
+														<option value="turma">Situação</option>
+														<option value="Aprovado">Aprovado</option>
+														<option value="Reprovado">Reprovado</option>
+													</select>
+												</th>
+											  </tr>  
+
+											  <tr>
+												<th>Maria Antonieta</th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Faltas" size="3"></th>
+												<th>
+													<select>
+														<option value="turma">Situação</option>
+														<option value="Aprovado">Aprovado</option>
+														<option value="Reprovado">Reprovado</option>
+													</select>
+												</th>
+											  </tr>  
+
+											<tr>
+												<th>Bela Andrade</th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Nota" size="3"></th>
+												<th><input type+"text" name="Faltas" size="3"></th>
+												<th>
+													<select>
+														<option value="turma">Situação</option>
+														<option value="Aprovado">Aprovado</option>
+														<option value="Reprovado">Reprovado</option>
+													</select>
+												</th>
+											  </tr> 
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+	
+		<div class="col-6 left">
+			<div class="box">
+			<div class="legenda2">
+				<p><h1>Legendas:</h1>
+				<h4>
+				MB1 - Média do 1º Bimestre<br>
+				SUB1 - Prova Substitutiva 1<br>
+				MB2 - Média do 2º Bimestre<br>
+				SUB2 - Prova Substitutiva 2<br>
+				MF - Média Final<br>
+				</h4>
+			</div>
+			</div>
+		</div>
+    </div>
+	
+	<div class="footer">
+		<div class="w3-row-padding">
+			<div class="w3-third">
+			<h2>TELEFONE</h2>
+				<p>COM:(11)4241-7277</p> 
+				<p>CEL:(11)97565-7804</p>
+			</div>
+
+			<div class="w3-third">
+				<h2>E-MAIL</h2>
+				<p>unitectbfinal@hotmail.com</p>
+			</div>
+
+			<div class="w3-third">
+				<h2>ENDEREÇO</h2>
+				<p>Av. Rudge, 315 - Bom Retiro, São Paulo - SP, 01133-000</p>
+			</div>
+		</div>
+	</div>	
+</body>
+</html>

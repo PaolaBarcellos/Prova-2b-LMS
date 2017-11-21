@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<title>UNIVANDS</title>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel "stylesheet"  href= "/css/font-awesome.css" >
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="..\css\home.css"></link>
+</head>
+
+<body>
+
+<!-- Login aluno-->
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="..\imagens\aluna.png" alt="Avatar" class="avatar">
+    </div>
+<!--login aluno-->
+    <div class="container">
+      <label><b>Nome de Usuário</b></label>
+      <input  type="text" maxlength="35" placeholder="Nome de Usuário" name="uname" required>
+
+      <label><b>Senha</b></label>
+      <input type="password" maxlength="8" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+      
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancelar</button>
+      <span class="psw">Esqueceu a <a href="#">Senha?</a></span>
+	 </form>
+    </div>
+</div>
+  
+  <!--login professor -->
+<div id="id02" class="modal2">
+  <form class="modal2-content animate">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal2">&times;</span>
+      <img src="..\imagens\prof.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label><b>Nome de Usuário</b></label>
+      <input type="text" maxlength="35" placeholder="Nome de Usuário" name="uname" required>
+	  
+	  <label><b>Código do Professor</b></label>
+      <input type="password" maxlength="7" placeholder="Código do Professor" name="psw" required>
+
+      <label><b>Senha</b></label>
+      <input type="password" maxlength="8" placeholder="Senha" name="psw" required>
+        
+      <button type="submit">Login</button>
+      
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancelar</button>
+      <span class="psw">Esqueceu a <a href="#">Senha?</a></span>
+    </div>
+  </form>
+</div>
+
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+// Get the modal
+var modal = document.getElementById('id02');
+
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal2) {
+        modal.style.display = "none";
+    }
+}
+
+</script>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="#home" class="w3-bar-item w3-button"><b>UNIVANDS</b></a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="#cursos" class="w3-bar-item w3-button">Cursos</a>
+      <a href="#sobre" class="w3-bar-item w3-button">Sobre</a>
+      <a href="#cadastroA" class="w3-bar-item w3-button">Cadastro aluno</a>
+	  <a href="#cadastroP" class="w3-bar-item w3-button">Cadastro Professor</a>
+	  <a class="w3-bar-item w3-button" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login Aluno</a>
+	  <a class="w3-bar-item w3-button" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Login Professor</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+  <img class="w3-image" src="..\imagens\imagem1.jpg" alt="Architecture" width="1500" height="800">
+  <div class="w3-display-middle w3-margin-top w3-center">
+    
+  </div>
+</header>
+
+<!-- Page content -->
+<div class="w3-content w3-padding" style="max-width:1564px">
+
+  <!-- Project Section -->
+  <div class="w3-container w3-padding-32" id="cursos">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Cursos</h3>
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+	<img src="..\imagens\bebe.jpg" alt="House" style="width:100%">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-gray w3-padding"><a href="smatricula.html">Banco De Dados</a></div>
+        
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+	<img src="..\imagens\bb.jpg" alt="House" style="width:100%">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-gray w3-padding"><a href="smatricula.html">Sistemas De informação</a></div>
+        
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+	<img src="..\imagens\b.jpg" alt="House" style="width:100%">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-gray w3-padding"><a href="smatricula.html">Análise e Desenvolvimento De sistemas</a></div>
+        
+      </div>
+    </div>
+    
+  </div>
+
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32" id="sobre">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Sobre</h3>
+    <p>A Faculdade UNIVANDS Tecnologia nasceu da percepção de um Grupo, que desde 1998 é referência em TI e Gestão , para suprir a falta de mão de obra especializada do mercado de tecnologia e oferecer uma formação completa e multidisciplinar aos alunos. Fazendo com que a faculdade se tornasse lider no mercado de trabalho.
+    </p>
+  </div>
+
+  </div>
+
+  <!-- Contact Section -->
+  <div class="w3-container w3-padding-32" id="cadastroA">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Cadastro para alunos</h3>
+    <p>Cadastro Para Alunos </p>
+    <form  target="_blank">
+      <input class="w3-input w3-section" type="text" placeholder="Name" required name="Name">
+      <input class="w3-input w3-section" type="email" placeholder="Email" required name="Email">
+      <input class="w3-input w3-section" type="password" placeholder="Senha" required name="Senha">
+      <input class="w3-input w3-section" type="password" placeholder="Confimração de senha" required name="Csenha">
+      <button class="w3-button w3-black w3-section" type="submit">
+        <i class="fa fa-paper-plane"></i> CADASTRAR-SE
+      </button>
+    </form>
+  </div>
+  <div class="w3-container w3-padding-32" id="cadastroP"> 
+  <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Cadastro para Professores</h3>
+    <p>Cadastrro para Pofessores</p>
+    <form  target="_blank">
+      <input class="w3-input w3-section" type="text" placeholder="Name" required name="Name">
+      <input class="w3-input w3-section" type="email" placeholder="Email" required name="Email">
+	  <input class="w3-input w3-section" type="text" placeholder="Codigo Do Professor" required name="CP">
+      <input class="w3-input w3-section" type="password" placeholder="Senha" required name="Senha">
+      <input class="w3-input w3-section" type="password" placeholder="Confimração de senha" required name="Csenha">
+      <button class="w3-button w3-black w3-section" type="submit">
+        <i class="fa fa-paper-plane"></i> CADASTRAR-SE
+      </button>
+    </form>
+<!-- End page content -->
+</div>
+
+<!-- Google Map -->
+<div id="googleMap" class="w3-grayscale" style="width:100%;height:450px;"></div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-16">
+  <div class="w3-row-padding">
+  <div class="w3-third">
+    <h2>TELEFONE</h2>
+    <p>COM:(11)4241-7277</p>
+	<p>CEL:(11)97565-7804</p>
+  </div>
+
+  <div class="w3-third">
+    <h2>E-MAIL</h2>
+    <p>unitctbfinal@hotmail.com</p>
+  </div>
+
+  <div class="w3-third">
+     <h2>ENDEREÇO</h2>
+    <p>Av. Rudge, 315 - Bom Retiro, São Paulo - SP, 01133-000</p>
+  </div>
+</div>
+</footer>
+
+<!-- Add Google Maps -->
+<script>
+function myMap()
+{
+  myCenter=new google.maps.LatLng(-23, -46);
+  var mapOptions= {
+    center:myCenter,
+    zoom:12, scrollwheel: false, draggable: false,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+
+  var marker = new google.maps.Marker({
+    position: myCenter,
+  });
+  marker.setMap(map);
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+<!--
+To use this code on your website, get a free API key from Google.
+Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+-->
+
+</body>
+</html>

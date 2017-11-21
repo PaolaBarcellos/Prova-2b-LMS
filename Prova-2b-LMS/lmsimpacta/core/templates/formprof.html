@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulário de prova e atividades</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="..\CSS\smartclass.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$( ".tipoQuestao" ).change(function() {
+				var valor = $(this).val();
+					switch(valor){
+						case "1":
+							if($("#aberta").hasClass("esconde")){
+								$("#aberta").removeClass("esconde");
+								$("#aberta").addClass("mostra");
+									
+							$("#multipla").addClass("esconde");
+							$("#boleano").addClass("esconde");
+							$("#associacao").addClass("esconde");
+							}else{
+								$("#aberta").addClass("esconde");
+								$("#aberta").removeClass("mostra");
+							}
+						break;
+						case "2":
+							if($("#multipla").hasClass("esconde")){
+								$("#multipla").removeClass("esconde");
+								$("#multipla").addClass("mostra");
+								$("#aberta").addClass("esconde");
+								
+							$("#boleano").addClass("esconde");
+							$("#associacao").addClass("esconde");
+							}else{
+								$("#multipla").addClass("esconde");
+								$("#multipla").removeClass("mostra");
+							}
+						break;
+						case "3":
+							if($("#boleano").hasClass("esconde")){
+								$("#boleano").removeClass("esconde");
+								$("#boleano").addClass("mostra");
+								$("#aberta").addClass("esconde");
+								$("#multipla").addClass("esconde");					
+								$("#associacao").addClass("esconde");
+							}else{
+								$("#boleano").addClass("esconde");
+								$("#boleano").removeClass("mostra");
+							}
+						break;
+						case "4":
+							if($("#associacao").hasClass("esconde")){
+								$("#associacao").removeClass("esconde");
+								$("#associacao").addClass("mostra");
+								$("#aberta").addClass("esconde");
+								$("#multipla").addClass("esconde");
+								$("#boleano").addClass("esconde");
+								
+							}else{
+								$("#associacao").addClass("esconde");
+								$("#associacao").removeClass("mostra");
+							}
+						break;
+						default:
+								$("#aberta").addClass("esconde");
+								$("#multipla").addClass("esconde");
+								$("#boleano").addClass("esconde");
+								$("#associacao").addClass("esconde");
+						break;
+						}
+					
+				});
+			});
+    </script>
+</head>
+<body background="..\imagens\fundo.png">	
+		<ul>
+			<center>
+				<li>
+					<li>
+						<a href="areaprofessor.html"> 
+							<button class="button2" style="vertical-align:middle" >
+								<span>
+									<h4><pre>HOME</pre></h4>
+								</span>
+							</button>
+						</a>
+					</li>
+						<h1>UNIVANDS</h1>
+				</li>
+			</center>
+		</ul>
+		
+
+			
+			
+			
+				<div class="row">
+					<div class="col-3 left">
+						<div class="aside">
+							<img src="..\Imagens\prof.png">
+							<p><strong>Ola:</strong> Nome do professor </p>
+							<p><strong>disciplina:</strong> nome do curso</p>
+							<a href="..\Paginas\notasefaltasprofessor.html">
+								<p>
+									<button class="button" style="vertical-align:middle">
+										<span>
+											<h4>Notas e Faltas</h4>
+										</span>
+									</button>
+								</p>
+							</a>
+							<a href="..\imagens\calendario.png">
+								<p>
+									<button class="button" style="vertical-align:middle">
+										<span>
+											<h4>Calendário e Horários</h4>
+										</span>
+									</button>
+								</p>
+							</a>
+						
+							<a href="..\Paginas\smartclassprofessor.html">
+								<p>
+									<button class="button" style="vertical-align:middle">
+										<span>	
+											<h4>SmartClass</h4>
+										</span>
+									</button>
+								</p>
+							</a>
+							<a href="perfilprof.html">
+								<p>
+									<button class="button" style="vertical-align:middle">
+										<span>
+											<h4>Perfil</h4>
+										</span>
+									</button>
+								</p>
+							</a>
+							<a href="index.html">
+								<p>
+									<button class="button" style="vertical-align:middle">
+										<span>
+											<h4>Sair</h4>
+										</span>
+									</button>
+								</p>
+							</a>
+						</div>
+					</div>
+			
+			
+			
+			
+			<div class="content">
+			<div class="box">	
+				<div><h3>Cadastro de teste</h3>
+					<form>
+						<p>Título do teste</p>
+							<input type="text">
+							<input type="submit" value="salvar">
+					</form>
+					<form>
+						<p>Cadastro de questões</p>
+						<select>
+							<option>Selecione o teste</option>
+						</select>
+						<select class="tipoQuestao">
+							<option>Selecione o tipo da questão</option>
+							<option value="1">ABERTA</option>
+							<option value="2">MÚLTIPLAS​ ​RESPOSTAS</option>
+							<option value="3">VERDADEIRO​ ​OU​ ​FALSO</option>
+							<option value="4">CORRESPONDÊNCIA​ ​OU​ ​ASSOCIAÇÃO</option>
+						</select>
+						
+						<div id="aberta"  class="esconde">
+							<p>Questão Aberta:</p>							
+							<textarea class="questao-aberta">
+							</textarea>
+						</div>
+						<div id="multipla" class="esconde">	
+							<p>Questão Multipla escolha:</p>					
+							<textarea class="questao-aberta">
+							</textarea><br/>
+							
+							<p>Opção 1:</p>					
+							<input type="text"><br/>
+							<p>Opção 2:</p>					
+							<input type="text"><br/>
+							<p>Opção 3:</p>					
+							<input type="text"><br/>
+							<p>Opção 4:</p>					
+							<input type="text"><br/>
+							<p>Opção 5:</p>					
+							<input type="text"><br/>
+							
+						</div>
+						<div id="boleano" class="esconde">	
+							<p>Questão Boleana:</p>					
+							<textarea class="questao-aberta">
+							</textarea><br/>
+							
+							<input type="radio" name="boleano" value="true" checked="checked"> Verdadeiro<br>
+							<input type="radio" name="boleano" value="false"> Falso<br>
+						</div>
+						
+						<div id="associacao" class="esconde">	
+							<p>Questão de Associação:</p>					
+							<textarea class="questao-aberta">
+							</textarea><br/>
+							
+							<p>Opção 1:</p>					
+							<input type="text">
+							<p>Opção 1 Associada:</p>	
+							<input type="text"><br/>
+							<p>Opção 2:</p>					
+							<input type="text">
+							<p>Opção 2 Associada:</p>
+							<input type="text"><br/>
+							<p>Opção 3:</p>					
+							<input type="text">
+							<p>Opção 3 Associada:</p>
+							<input type="text"><br/>
+							<p>Opção 4:</p>					
+							<input type="text">
+							<p>Opção 4 Associada:</p>
+							<input type="text"><br/>
+							<p>Opção 5:</p>					
+							<input type="text">
+							<p>Opção 5 Associada:</p>
+							<input type="text"><br/>
+						</div>
+						<input type="submit" value="Salvar Questão"><br/>
+					</form>
+				</div>
+			</div>		
+			</div>
+		</div>
+		
+		<div class="footer">
+			<div class="w3-row-padding">
+				<div class="w3-third">
+					<h2>TELEFONE</h2>
+					<p>COM:(11)4241-7277</p> 
+					<p>CEL:(11)97565-7804</p>
+				</div>
+
+				<div class="w3-third">
+					<h2>E-MAIL</h2>
+					<p>unitectbfinal@hotmail.com</p>
+				</div>
+
+				<div class="w3-third">
+					<h2>ENDEREÇO</h2>
+					<p>Av. Rudge, 315 - Bom Retiro, São Paulo - SP, 01133-000</p>
+				</div>
+			</div>
+		</div>
+</body>
+</html>
